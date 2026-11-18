@@ -1,4 +1,6 @@
 export interface OpenMeteoResponse {
+  hourly_units: any
+  hourly: any
   latitude: number
   longitude: number
   generationtime_ms: number
