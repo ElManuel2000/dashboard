@@ -86,7 +86,7 @@ function App() {
         {data && (
         <ChartUI
             title='Temperatura y viento por hora'
-            labels={data.hourly.time.map((tiempo) => tiempo.slice(11))}
+            labels={data.hourly.time.map((tiempo: string) => tiempo.slice(11))}
             values1={data.hourly.temperature_2m}
             values2={data.hourly.wind_speed_10m}
             label1={`Temperatura (${data.hourly_units.temperature_2m})`}
@@ -98,7 +98,7 @@ function App() {
       <Grid size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
         {data && (
         <TableUI
-            labels={data.hourly.time.map((tiempo) => tiempo.slice(11))}
+            labels={data.hourly.time.map((tiempo: string) => tiempo.slice(11))}
             values1={data.hourly.temperature_2m}
             values2={data.hourly.wind_speed_10m}
             header1={`Temperatura (${data.hourly_units.temperature_2m})`}
